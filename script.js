@@ -12,7 +12,7 @@ const newTarget = () => {
   let addTarget = document.createElement('li')
   addTarget.innerHTML="<img draggable='false' src='target.png'>"
   addTarget.className="target"
-  addTarget.style.cssText= `inset: ${Math.trunc(Math.random()*460)}px ${Math.trunc(Math.random()*960)}px`
+  addTarget.style.cssText= `inset: ${Math.trunc(Math.random()*(ul.clientHeight - 40))}px ${Math.trunc(Math.random()*(ul.clientWidth - 40))}px`
   ul.append(addTarget)
   // delete new element
   li = document.querySelectorAll('li')
