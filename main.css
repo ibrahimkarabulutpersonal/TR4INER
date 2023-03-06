@@ -1,0 +1,105 @@
+* {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  border: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+:root {
+  --darkGray: rgba(30,30,40);
+  --lightDarkGray: rgba(40,40,50);
+  --orange: orange;
+}
+body {
+  background-color: var(--darkGray);
+  width: 100vw;
+  height: 100vh;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+ul {
+  position: relative;
+  background-color: var(--lightDarkGray);
+  max-width: 1000px;
+  width: 90%;
+  max-height: 60vh;
+  aspect-ratio: 16 / 9;
+}
+@keyframes opening {
+  0% {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  100% {
+    opacity: 1;
+    width: 40px;
+    height: 40px;
+  }
+  
+}
+li {
+  position: absolute;
+  /*background: url(target.png) center center/cover;*/
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+li img {
+  width: 40px;
+  height: 40px;
+  animation: opening .3s;
+  object-position: 50% 50%;
+}
+button {
+  padding: 15px 30px;
+  cursor: pointer;
+}
+.btnStartGame {
+  background-color: var(--orange);
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  border-radius: 5px;
+}
+.btnEndGame {
+  background-color: #f00;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  border-radius: 5px;
+}
+.btnRefreshGame {
+  background-color:royalblue;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  border-radius: 5px;
+}
+#stop, #refresh {
+  display: none;
+}
+.panel {
+  max-width: 1000px;
+  width: 90%;
+  font-weight: 600;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+.logo {
+  font-size: 30px;
+  color: orange;
+}
+.kill {
+  color:#f00;
+}
