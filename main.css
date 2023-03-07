@@ -30,6 +30,8 @@ ul {
   min-height: 50vh;
   max-height: 60vh;
   aspect-ratio: 16 / 9;
+  cursor: crosshair;
+  caret-color: #0f0;
 }
 @keyframes opening {
   0% {
@@ -60,33 +62,54 @@ li img {
   object-position: 50% 50%;
 }
 button {
-  padding: 15px 30px;
+  background-color: transparent;
+  width: auto;
+  height: 50px;
+  padding: 0;
   cursor: pointer;
+  font-size: 14px;
+  font-weight: 300;
+  gap: 10px;
+  color: #aaa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .3s ease-in-out;
+  padding-inline: 20px;
+  box-shadow: 0 0 1px 0 #fff;
+}
+button span {
+  width: 0;
+  overflow: hidden;
+  display: inline-block;
+}
+button:hover {
+  background-color: rgba(255,255,255,.1);
+  color: #fff;
+}
+button span {
+  width: auto;
+  overflow: hidden;
+  display: inline-block;
 }
 .btnStartGame {
-  background-color: var(--orange);
-  font-size: 16px;
-  font-weight: 600;
+  background-color: limegreen;
   color: #fff;
-  border-radius: 5px;
+  font-weight: 600;
 }
 .btnEndGame {
-  background-color: #f00;
-  font-size: 16px;
-  font-weight: 600;
+  background-color: orangered;
   color: #fff;
-  border-radius: 5px;
-}
-.btnRefreshGame {
-  background-color:royalblue;
-  font-size: 16px;
   font-weight: 600;
-  color: #fff;
-  border-radius: 5px;
 }
-#stop, #refresh {
+.btnFullScreen {
+  color: #fff;
+  font-weight: 600;
+  margin-left: auto;
+}
+/* #stop, #refresh {
   display: none;
-}
+} */
 .panel {
   max-width: 1000px;
   width: 90%;
@@ -96,12 +119,40 @@ button {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 50px;
+  gap: 50px 20px;
+}
+.control {
+  justify-content: flex-start;
+  gap: 20px
+}
+.control > button{
+  justify-content: center;
 }
 .logo {
-  font-size: 30px;
-  color: orange;
+  font-size: 25px;
+  color:orange;
 }
-.kill {
+.wrapper-sayac {
+  font-size: 16px;
+}
+.sayac {
   color:#f00;
+}
+
+.extensions {
+  display: flex;
+  gap: 20px;
+  margin-left: auto;
+}
+
+@media (max-width:488px) {
+  body {
+    gap: 20px;
+  }
+  .panel {
+    gap: 20px;
+  }
+  .control > button {
+    flex-grow: 1;
+  }
 }

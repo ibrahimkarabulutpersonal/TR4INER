@@ -6,19 +6,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TR4INER ibrahim Karabulut</title>
   <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 </head>
-<body>
+<body id="deneme">
   <div class="panel">
     <span class="logo">TR4INER</span>
-    <span>Toplam S. <span class="kill"> 00 </span> / Ölen s. <span class="kill"> 00 </span></span>
+    <span class="wrapper-sayac">Toplam S. <span id="toplam" class="sayac"> 00 </span> &nbsp;&nbsp;/&nbsp;&nbsp; Vurulan s. <span id="vurulan" class="sayac"> 00 </span></span>
   </div>
   <ul>
     <li class="target" style="opacity: 0;"><img src="target.png" alt=""></li>
   </ul>
-  <div>
-    <button id="start" class="btnStartGame">Başla</button>
-    <button id="stop" class="btnEndGame">Bitir</button>
-    <button id="refresh" class="btnRefreshGame">Yeni Oyun Başlat</button>
+  <div class="panel control">
+    <button id="start" class="btnStartGame"><i class="fa-solid fa-play"></i><span>Başlat</span></button>
+    <button id="stop" class="btnEndGame"><i class="fa-solid fa-stop"></i><span>Durdur</span></button>
+    <button id="refresh" class="btnRefreshGame"><i class="fa-solid fa-rotate-left"></i><span>Yeniden Başlat</span></button>
+    <div class="extensions">
+      <!--<button id="share" class="btnShare"><i class="fa-solid fa-share"></i><span>Paylaş</span></button>-->
+      <button id="fullscreen" class="btnFullScreen"><i class="fa-solid fa-expand"></i></button>
+    </div>
   </div>
   <script src="script.js"></script>
 </body>
