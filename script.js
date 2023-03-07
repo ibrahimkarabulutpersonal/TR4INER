@@ -27,7 +27,7 @@ const newTarget = () => {
 // delete new element
 ul.addEventListener('click', e => {
   if(e.target.nodeName == "IMG") {
-    e.target.remove()
+    e.target.parentElement.remove()
     vurulan.textContent = vurulanS++
   }
 })
